@@ -3,7 +3,7 @@
     font-style: normal;
     font-weight: 400;
     font-display: optional;
-    src: url("../InterTight-Regular.ttf") format("woff2");
+    src: url("../../resources/fonts/InterTight-Regular.ttf") format("woff2");
 }
 
 .header {
