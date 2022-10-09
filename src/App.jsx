@@ -1,8 +1,9 @@
 import React from 'react';
+import NavigationBar from "./components/NavigationBar";
 
 export const App = () => {
-    console.log("!!!");
-    return (<div>
-        Это текст
-    </div>);
+    return (
+        <NavigationBar>
+        </NavigationBar>
+    );
 }
