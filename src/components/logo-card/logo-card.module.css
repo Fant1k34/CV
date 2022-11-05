@@ -1,3 +1,11 @@
+@font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-display: optional;
+    src: url("../../resources/fonts/InterTight-Regular.ttf") format("woff2");
+}
+
 .logoCard {
     display: grid;
     grid-template-columns: 40px auto;

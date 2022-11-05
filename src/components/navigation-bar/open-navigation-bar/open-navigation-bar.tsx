@@ -4,6 +4,8 @@ import { IconMain } from "../icons/icon-main";
 // @ts-ignore
 import photo from '../../../resources/pictures/logoCVCropped5.jpg';
 import { cn } from "../../../api/common";
+import {LogoCard} from "../../logo-card/logo-card";
+import {IconExperience} from "../icons/icon-experience";
 
 type props = {
     platform: string;
@@ -11,50 +13,31 @@ type props = {
 };
 
 export const OpenNavigationBar = ({ platform, children }: props) => {
+    let menuElementWrapper = (text: string) => <span className={styles.menuElement__text}>{ text }</span>;
+
     return (
-        <main className={styles.main}>
+        <section className={styles.main}>
             <nav className={cn(styles.sidePanel, styles.main__sidePanel)}>
                 <header className={styles.sidePanel__logoHeader}>
                     <img src={photo} className={styles.sidePanel__logoIcon}/>
                     <div className={cn(styles.sidePanel__contactInfo, styles.contactInfo)}>
-                        <section className={styles.contactInfo__element}>
-                            <article className={styles.contactInto__logo}>
-                            </article>
-                            <article className={styles.contactInfo__network}>
-                                TG:
-                            </article>
-                        </section>
-                        <section className={styles.contactInfo__element}>
-                            <article className={styles.contactInto__logo}>
-                            </article>
-                            <article className={styles.contactInfo__network}>
-                                LinkedIN:
-                            </article>
-                        </section>
+                        <LogoCard icon={<IconMain/>} content="TG:"/>
+                        <LogoCard content="LinkedIN:"/>
                     </div>
                 </header>
-                <section className={cn(styles.sidePanel__menuElement, styles.menuElement)}>
-                    <IconMain/>
-                    <span className={styles.menuElement__text}>
-                        Главная
-                    </span>
-                </section>
-                <section className={cn(styles.sidePanel__menuElement, styles.menuElement)}>
-                    <IconMain/>
-                    <span className={styles.menuElement__text}>
-                        Опыт работы
-                    </span>
-                </section>
-                <section className={cn(styles.sidePanel__menuElement, styles.menuElement)}>
-                    <IconMain/>
-                    <span className={styles.menuElement__text}>
-                        Проекты
-                    </span>
-                </section>
+                <LogoCard className={cn(styles.sidePanel__menuElement, styles.menuElement)}
+                          icon={<IconMain/>}
+                          content={menuElementWrapper("Главная")}/>
+                <LogoCard className={cn(styles.sidePanel__menuElement, styles.menuElement)}
+                          icon={<IconExperience/>}
+                          content={menuElementWrapper("Опыт работы")}/>
+                <LogoCard className={cn(styles.sidePanel__menuElement, styles.menuElement)}
+                          icon={<IconMain/>}
+                          content={menuElementWrapper("Проекты")}/>
             </nav>
             <main>
                 { children }
             </main>
-        </main>
+        </section>
     );
 };

@@ -1,20 +1,20 @@
 import React from 'react';
-import styles from "../navigation-bar/open-navigation-bar/open-navigation-bar.module.css";
+import styles from "./logo-card.module.css";
 
 type props = {
-    icon: React.ReactNode;
+    icon?: React.ReactNode;
     content: React.ReactNode;
 } & React.HTMLAttributes<HTMLDivElement>;
 
 export const LogoCard = ({ icon, content, ...defaultProps }: props) => {
     return (
-        <section className={styles.logoCard} {...defaultProps}>
-            <article>
+        <article {...defaultProps} className={styles.logoCard}>
+            <div>
                 { icon }
-            </article>
-            <article className={styles.logoCard__text}>
+            </div>
+            <div className={styles.logoCard__text}>
                 { content }
-            </article>
-        </section>
+            </div>
+        </article>
     );
 }
