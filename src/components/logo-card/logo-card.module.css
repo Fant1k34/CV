@@ -8,11 +8,16 @@
 
 .logoCard {
     display: grid;
-    grid-template-columns: 40px auto;
+    grid-template-columns: 21px auto;
+    grid-gap: 19px;
     align-items: center;
 }
 
 .logoCard__text {
     font-family: Inter, serif;
     font-size: 14px;
+}
+
+.logoCard__logo {
+    justify-self: center;
 }

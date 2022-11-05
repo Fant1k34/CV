@@ -1,8 +1,8 @@
 import React from 'react';
-import { Header } from "./header/header";
+import { SidePanel } from "./components/side-panel/side-panel";
 
 export const App = () => {
     return (
-        <Header/>
+        <SidePanel/>
     );
 };
