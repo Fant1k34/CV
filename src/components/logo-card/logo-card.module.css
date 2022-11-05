@@ -1,0 +1,10 @@
+.logoCard {
+    display: grid;
+    grid-template-columns: 40px auto;
+    align-items: center;
+}
+
+.logoCard__text {
+    font-family: Inter, serif;
+    font-size: 14px;
+}

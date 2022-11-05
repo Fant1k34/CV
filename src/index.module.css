@@ -1,0 +1,8 @@
+@import "resources/pallete/pallete.module.css";
+
+:root {
+    --basic-background: var(--cornsilk);
+    --alernative-background: var(--honeydew);
+    --dark-text-background: var(--jet);
+    --contrast-text-background: var(--fern-green);
+}

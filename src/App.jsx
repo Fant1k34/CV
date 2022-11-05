@@ -1,9 +1,8 @@
 import React from 'react';
-import NavigationBar from "./components/NavigationBar";
+import { Header } from "./header/header";
 
 export const App = () => {
     return (
-        <NavigationBar>
-        </NavigationBar>
+        <Header/>
     );
-}
+};
