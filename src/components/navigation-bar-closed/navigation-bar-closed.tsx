@@ -1,5 +1,5 @@
 import React from "react";
-import { IconMain } from "../icons/icon-main";
+import { IconMain } from "../side-panel/icons/icon-main";
 import styles from './navigation-bar-closed.module.css';
 
 type props = {

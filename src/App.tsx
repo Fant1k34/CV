@@ -3,6 +3,6 @@ import { SidePanel } from "./components/side-panel/side-panel";
 
 export const App = () => {
     return (
-        <SidePanel/>
+        <SidePanel platform="desktop"/>
     );
 };

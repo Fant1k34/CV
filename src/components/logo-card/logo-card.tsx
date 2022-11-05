@@ -6,7 +6,7 @@ type props = {
     content: React.ReactNode;
 } & React.HTMLAttributes<HTMLDivElement>;
 
-const LogoCard = ({ icon, content, ...defaultProps }: props) => {
+export const LogoCard = ({ icon, content, ...defaultProps }: props) => {
     return (
         <article className={styles.logoCard} {...defaultProps}>
             <div className={styles.logoCard__logo}>
@@ -18,5 +18,3 @@ const LogoCard = ({ icon, content, ...defaultProps }: props) => {
         </article>
     );
 };
-
-export default LogoCard;
